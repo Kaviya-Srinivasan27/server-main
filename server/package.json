@@ -1,31 +1,32 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Jerobyte CRM Server",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kaviya-Srinivasan27/finaloriginaljerobytecrm.git"
+    "url": "git+https://github.com/Kaviya-Srinivasan27/server-main.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Srinivasan",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Kaviya-Srinivasan27/finaloriginaljerobytecrm/issues"
-  },
-  "homepage": "https://github.com/Kaviya-Srinivasan27/finaloriginaljerobytecrm#readme",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.11.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^25.3.0",
+    "@types/pg": "^8.11.4",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
