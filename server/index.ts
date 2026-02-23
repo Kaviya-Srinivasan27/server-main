@@ -2,10 +2,11 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 
-// Import your new database connection
+// Import your database connection
 import { connectDB } from "./db/connect";
 
-// FIX: Remove the .js extensions from these local imports
+// Import routes
+// Note: Ensure demo.ts exists or remove it if it causes "@shared/api" errors
 import { handleDemo } from "./routes/demo";
 import authRouter from "./routes/auth";
 import productsRouter from "./routes/products";
@@ -43,3 +44,11 @@ export function createServer() {
 
   return app;
 }
+
+// Start the server
+const app = createServer();
+const PORT = Number(process.env.PORT) || 10000; // FIX: Ensure PORT is a number
+
+app.listen(PORT, "0.0.0.0", () => { // FIX: Bind to 0.0.0.0 for Render
+  console.log(`Backend is running on port ${PORT} and connected to Neon 🚀`);
+});

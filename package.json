@@ -4,6 +4,8 @@
     "pg": "^8.18.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
     "@types/pg": "^8.16.0"
   }
 }
